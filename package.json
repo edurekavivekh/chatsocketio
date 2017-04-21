@@ -1,0 +1,21 @@
+{
+  "name": "socketio",
+  "version": "1.0.0",
+  "description": "Real time chat application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "author": "vivek.hebalkar@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3",
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "ejs": "~2.5.5",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.2"
+  }
+}

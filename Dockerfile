@@ -1,6 +1,6 @@
-FROM mycentos7
+FROM node
 MAINTAINER Vivek Hebalkar <vivek.hebalkar@gmail.com>
-RUN yum install nodejs -y
+#RUN yum install nodejs -y
 # Set the working directory
 WORKDIR /usr/src/app
 

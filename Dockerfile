@@ -9,7 +9,7 @@ COPY package.json /usr/src/app/
 # Add the code
 COPY . /usr/src/app
 #RUN npm install
-
+EXPOSE 3000
 # Set an entrypoint, to automatically install node modules
 ENTRYPOINT ["/bin/bash", "-c", "if [[ ! -d node_modules ]]; then npm install; fi; exec \"${@:0}\";"]
 CMD ["npm", "start"]

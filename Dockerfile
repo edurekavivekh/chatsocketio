@@ -16,3 +16,4 @@ CMD ["npm", "start"]
 
 # Run the tests and build, to make sure everything is working nicely
 #RUN npm run build && npm run test
+

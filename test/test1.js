@@ -30,7 +30,7 @@ it('Should broadcast new user to all users', function(done){
     client2.on('connect', function(data){
       client2.emit('connection name', chatUser2);
     });
-
+    client2.emit('new user',  {name: 'viiveek'});
     client2.on('new user', function(usersName){
       usersName.should.equal(chatUser2.name + " has joined.");
       client2.disconnect();
@@ -39,6 +39,7 @@ it('Should broadcast new user to all users', function(done){
   });
 
   var numUsers = 0;
+  client2.emit('new user',  {name: 'dilip'});
   client1.on('new user', function(usersName){
     numUsers += 1;
 

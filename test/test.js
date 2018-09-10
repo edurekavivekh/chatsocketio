@@ -5,7 +5,7 @@ var assert = require('assert');
 describe('HTTP Server Test', function() {
 	
 	describe('/', function() {
-		it('should be Your nickname', function(done) {
+		it('Your nickname', function(done) {
 			http.get('http://127.0.0.1:3000', function(response) {
 				
 				assert.equal(response.statusCode, 200);

@@ -39,7 +39,7 @@ it('Should broadcast new user to all users', function(done){
   });
 
   var numUsers = 0;
-  client2.emit('new user',  {name: 'dilip'});
+  client1.emit('new user',  {name: 'dilip'});
   client1.on('new user', function(usersName){
     numUsers += 1;
 

@@ -11,7 +11,7 @@ COPY . /usr/src/app
 #RUN npm install
 EXPOSE 3000
 # Set an entrypoint, to automatically install node modules
-ENTRYPOINT ["/bin/bash", "-c", "if [[ ! -d node_modules ]]; then npm install; npm install -g mocha; fi; exec \"${@:0}\";"]
+ENTRYPOINT ["/bin/bash", "-c", "if [[ ! -d node_modules ]]; then npm install; npm install -g mocha; npm install socket.io-client -g; fi; exec \"${@:0}\";"]
 CMD ["npm", "start"]
 
 # Run the tests and build, to make sure everything is working nicely

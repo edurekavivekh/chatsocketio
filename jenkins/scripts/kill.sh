@@ -1,8 +1,5 @@
-#!/usr/bin/env sh
+#!/bin/bash -x
 
-echo 'The following command terminates the "npm start" process using its PID'
-echo '(written to ".pidfile"), all of which were conducted when either'
-echo '"deliver-for-development.sh" or "deliver-for-development.sh" was executed.'
-set -x
-ps -elf
-#kill $(cat .pidfile)
+docker -H 10.0.109.150 stop chatapp
+docker -H 10.0.109.150 rmi --force chatapp:$BUILD
+

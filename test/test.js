@@ -7,7 +7,7 @@ describe('HTTP Server Test', function() {
 	
 	describe('/', function() {
 		it('Your nickname', function(done) {
-			http.get('http://127.0.0.1:3000', function(response) {
+			http.get('http://127.0.0.1:8989', function(response) {
 				
 				assert.equal(response.statusCode, 200);
 

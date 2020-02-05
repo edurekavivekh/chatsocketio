@@ -18,6 +18,8 @@ jobs:
             - v1-dependencies-
 
       - run: yarn install
+      
+      - run: npm install mocha
 
       - save_cache:
           paths:

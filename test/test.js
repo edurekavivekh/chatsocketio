@@ -1,5 +1,5 @@
 var http = require('http');
-var server = require('server.js')
+var server = require('./server')
 var assert = require('assert');
 
 

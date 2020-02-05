@@ -19,6 +19,7 @@ describe('HTTP Server Test', function() {
 				//	assert.equal(body, 'Your nickname');
 				//	done();
 				//});
+				done();
 			});
 		});
 	});

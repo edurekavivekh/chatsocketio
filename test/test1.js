@@ -15,7 +15,7 @@ var chatUser3 = {'name':'Dana'};
 
 describe("Chat Server",function(){
 
-});
+//});
 
 
 it('Should broadcast new user to all users', function(done){
@@ -50,4 +50,5 @@ it('Should broadcast new user to all users', function(done){
       done();
     }
   });
+});
 });

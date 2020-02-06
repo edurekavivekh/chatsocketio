@@ -11,15 +11,14 @@ describe('HTTP Server Test', function() {
 				
 				assert.equal(response.statusCode, 200);
 
-                                //var body = '';
-				//response.on('data', function(d) {
-				//	body += d;
-				//});
-				//response.on('end', function() {
+                                var body = '';
+				response.on('data', function(d) {
+					body += d;
+				});
+				response.on('end', function() {
 				//	assert.equal(body, 'Your nickname');
-				//	done();
-				//});
-				done();
+					done();
+				});
 			});
 		});
 	});

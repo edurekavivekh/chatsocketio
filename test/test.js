@@ -3,7 +3,7 @@ var server = require('./server')
 var assert = require('assert');
 
 
-describe('HTTP Server Test', function() {
+describe('HTTP Server Test', function(done) {
 	
 	describe('/', function() {
 		it('Your nickname', function(done) {

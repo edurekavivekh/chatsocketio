@@ -5,7 +5,7 @@ var assert = require('assert');
 
 describe('HTTP Server Test', function(done) {
 	
-	describe('/', function() {
+	describe('/', function(done) {
 		it('Your nickname', function(done) {
 			http.get('http://127.0.0.1:8989', function(response) {
 				
@@ -21,6 +21,7 @@ describe('HTTP Server Test', function(done) {
 				});
 			});
 		});
+		done();
 	});
 	//done();
 });

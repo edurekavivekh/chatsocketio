@@ -34,7 +34,7 @@ jobs:
           set -xu
           mkdir -p /tmp/artifacts
           ls -lrt
-          cp -r *.* /tmp/artifacts
+          cp -r ./* /tmp/artifacts/
       
       - store_artifacts:
           path: /tmp/artifacts

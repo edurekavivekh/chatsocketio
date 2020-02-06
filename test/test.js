@@ -3,9 +3,9 @@ var server = require('./server')
 var assert = require('assert');
 
 
-describe('HTTP Server Test', function(done) {
+describe('HTTP Server Test', function() {
 	
-	describe('/', function(done) {
+	describe('/', function() {
 		it('Your nickname', function(done) {
 			http.get('http://127.0.0.1:8989', function(response) {
 				
@@ -20,8 +20,9 @@ describe('HTTP Server Test', function(done) {
 					done();
 				});
 			});
+			done();
 		});
-		done();
+		
 	});
-	//done();
+	
 });

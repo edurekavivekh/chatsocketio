@@ -29,3 +29,11 @@ jobs:
 
 
       - run: npm run test
+      
+      - store_artifacts:
+          path: /tmp/artifacts
+          destination: build
+
+      # Upload test results
+      - store_test_results:
+          path: /tmp/test-reports

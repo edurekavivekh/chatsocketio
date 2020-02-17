@@ -47,7 +47,7 @@ jobs:
       docker:
       
         - image: circleci/node:10.15.0
-       steps: 
+      steps: 
         - azure/build-and-push-image:
             dockerfile: Dockerfile
             path: /

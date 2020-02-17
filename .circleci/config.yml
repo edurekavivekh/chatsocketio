@@ -43,14 +43,14 @@ jobs:
           path: /tmp/artifacts
   
   build-deploy:
-     jobs: 
-       - azure/build-and-push-image:
-           login-server-name: bridgelabz.azurecr.io # e.g. {yourregistryname}.azure.io
-           registry-name: bridgelabz
-           repo: bridgelabz.azurecr.io/socketchatapp:latest
-           filters:
-             branches:
-               only: master
+    steps: 
+      - azure/build-and-push-image:
+          login-server-name: bridgelabz.azurecr.io # e.g. {yourregistryname}.azure.io
+          registry-name: bridgelabz
+          repo: bridgelabz.azurecr.io/socketchatapp:latest
+          filters:
+            branches:
+              only: master
                
   #deploy-stage:
   #  docker:

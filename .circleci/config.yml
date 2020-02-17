@@ -43,16 +43,20 @@ jobs:
           path: /tmp/artifacts
   
   build-deploy:
-    steps: 
-      - azure/build-and-push-image:
-          dockerfile: Dockerfile
-          path: /
-          login-server-name: bridgelabz.azurecr.io # e.g. {yourregistryname}.azure.io
-          registry-name: bridgelabz
-          repo: bridgelabz.azurecr.io/socketchatapp:latest
-          filters:
-            branches:
-              only: master
+    build:
+      docker:
+      
+        - image: circleci/node:10.15.0
+      steps: 
+        - azure/build-and-push-image:
+            dockerfile: Dockerfile
+            path: /
+            login-server-name: bridgelabz.azurecr.io # e.g. {yourregistryname}.azure.io
+            registry-name: bridgelabz
+            repo: bridgelabz.azurecr.io/socketchatapp:latest
+            filters:
+              branches:
+                only: master
                
   #deploy-stage:
   #  docker:

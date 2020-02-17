@@ -45,6 +45,8 @@ jobs:
   build-deploy:
     steps: 
       - azure/build-and-push-image:
+          dockerfile: Dockerfile
+          path: /
           login-server-name: bridgelabz.azurecr.io # e.g. {yourregistryname}.azure.io
           registry-name: bridgelabz
           repo: bridgelabz.azurecr.io/socketchatapp:latest

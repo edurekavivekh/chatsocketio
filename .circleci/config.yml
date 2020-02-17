@@ -42,7 +42,8 @@ jobs:
       - store_artifacts:
           path: /tmp/artifacts
   
- 
+build-deploy:
+     jobs: 
        - azure/build-and-push-image:
            login-server-name: bridgelabz.azurecr.io # e.g. {yourregistryname}.azure.io
            registry-name: bridgelabz
